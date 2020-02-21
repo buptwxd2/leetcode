@@ -11,6 +11,8 @@ class Solution:
 
         new_head = self.reverseList(head.next)
 
+        # find the tail node in the reversed sub linked list
+        # see solution_3 for a more efficient way
         node = new_head
         while node.next:
             node = node.next
