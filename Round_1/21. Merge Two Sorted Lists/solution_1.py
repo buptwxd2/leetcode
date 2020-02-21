@@ -29,10 +29,7 @@ class Solution:
                 node2 = node2.next
 
             curr_node = curr_node.next
-
-        if node1:
-            curr_node.next = node1
-        if node2:
-            curr_node.next = node2
+        
+        curr_node.next = node1 if node1 else node2
 
         return head
