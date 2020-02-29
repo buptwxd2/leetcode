@@ -28,3 +28,9 @@ s = Solution()
 s.countPrimes(10)
 
 
+"""
+Results: Time Limit Exceeded
+Time complexity: O(n ** 1.5)
+"""
+
+
