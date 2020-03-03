@@ -10,14 +10,14 @@ class Solution:
         :rtype: int
         """
 
-        def check_range(start, end):
-            if start >= end:
-                return start
+        for i in range(1, n + 1):
+            if isBadVersion(i):
+                return i
 
-            mid = (start + end) // 2
-            if isBadVersion(mid):
-                check_range(start, mid)
-            else:
-                check_range(mid + 1, end)
+        return 0
 
-        return check_range(1, n)
+"""
+Naive Solution
+Results:
+Time Limit Exceeded
+"""
