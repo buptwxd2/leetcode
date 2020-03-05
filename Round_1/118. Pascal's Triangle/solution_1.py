@@ -8,16 +8,15 @@ class Solution:
         if numRows == 2:
             return [[1], [1, 1]]
 
-        my_list = [[], [1], [1, 1]]
-        for i in range(3, numRows + 1):
-            sub_list = [1] * i
+        my_list = [[1], [1, 1]]
+        for i in range(2, numRows):
+            sub_list = [1] * (i + 1)
             for j in range(i):
-                if j != 0 and j != i - 1:
+                if j != 0 and j != i:
                     sub_list[j] = my_list[i - 1][j - 1] + my_list[i - 1][j]
 
             my_list.append(sub_list)
 
-        my_list.pop(0)
         return my_list
 
 """
