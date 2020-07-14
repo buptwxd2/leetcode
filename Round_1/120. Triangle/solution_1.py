@@ -1,14 +1,12 @@
 class Solution:
     def minimumTotal(self, triangle) -> int:
-
         row = len(triangle)
         column = len(triangle)
         if row == 0:
             return 0
 
         # dp or states
-        dp = [[float('inf')] * column for _ in range(triangle)]
-        dp = [float('inf') * column for _ in range()]
+        dp = [[float('inf')] * column for _ in range(row)]
 
         # initialize the first row
         dp[0][0] = triangle[0][0]
